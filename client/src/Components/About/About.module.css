@@ -1,0 +1,116 @@
+.titulo{
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-width: 100vh;
+    min-height: 90vh;
+    margin-top: 20px;
+    padding-bottom: 17px;
+}
+.texto{
+    font-size: x-large;
+    color: rgb(233, 233, 238);
+    font-family: Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    -webkit-text-stroke: 0.1px #080808;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+}
+
+.arriba{
+    font-size: xx-large;
+    color: rgb(233, 233, 238);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    -webkit-text-stroke: 0.5px #000;
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.div{
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    height: 840px;
+    background-color: rgba(65, 64, 64, 0.801);
+    border: 2px solid #000; 
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.logoig{
+    height: 40px;
+    width: 40px;
+    padding-top: 0px;
+    margin-top: 40px;
+    margin-left: 10px;
+    filter: brightness(0%);
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.fotoig{
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-left: 200px;
+    display: block;
+}
+
+.logoig:hover {
+    filter: brightness(650%); 
+}
+
+.logoli{
+    height: 40px;
+    width: 40px;
+    padding-top: -50px;
+    margin-left: 10px;
+    filter: brightness(0%);
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.logoli:hover {
+    filter: brightness(650%); 
+}
+
+.textologos{
+    font-size: smaller;
+    color: rgb(233, 233, 238);
+    font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
+    -webkit-text-stroke: 0.1px #000;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+}
+
+.fotoig2{
+    height: 150px;
+    width: 140px;
+    margin-top: 20px;
+    margin-left: 180px;
+    display: block;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 5px rgb(248, 248, 248);
+}
+
+.fondotextos{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0); 
+    border-radius: 4px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 5px rgb(248, 248, 248);
+}
