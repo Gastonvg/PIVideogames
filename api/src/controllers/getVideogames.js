@@ -7,7 +7,7 @@ const {Videogame, Genres} = require ('../db');
 const getVideogames = async (req, res) => {
   try {
     let dbVideogames = [];
-    // Consultar todos los videojuegos de la base de datos
+
     dbVideogames = await Videogame.findAll({
       include: [{ model: Genres, attributes: ['id', 'name'], through: { attributes: [] } }]
       });
@@ -15,14 +15,14 @@ const getVideogames = async (req, res) => {
       let page = 1;
       let totalResults = 0;
       while (totalResults < 100) {
-        // Consultar videojuegos de la API en la página actual
+       
         const response = await axios.get(`${URL}${DB_APIKEY}&page=${page}&page_size=100`);
         const currentPageVideogames = response.data.results || [];
         apiVideogames = [...apiVideogames, ...currentPageVideogames];
         totalResults += currentPageVideogames.length;
         page++;
       }
-       // Mapear y combinar los resultados de la base de datos y la API
+      
     const mappedVideogames = apiVideogames.map(videojuego => ({
       id: videojuego.id,
       name: videojuego.name,
@@ -35,8 +35,7 @@ const getVideogames = async (req, res) => {
     }));
     const combinedResults = [...dbVideogames, ...mappedVideogames];
 
-    // Devolver el arreglo de objetos con la información de todos los videojuegos
-    res.json(combinedResults.slice(0, 100)); // Limitar a 100 videojuegos
+    res.json(combinedResults.slice(0, 100)); 
 
    
     } catch (error) {

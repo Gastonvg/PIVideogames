@@ -4,6 +4,8 @@ const initialState = {
     videogames:[],
     videogamesall: [],
     videogamespreordeno: [],
+    typegenre: 'All',
+    typeid: 'All',
 }
 
   
@@ -27,6 +29,7 @@ const reducer = (state = initialState, action) => {
                 videogames: aregrar
             };
         case  ORDENALF: 
+            state.opcionordenalf = action.payload
             const orderStateCopyAlpha = { ...state };
             const charactersToOrderAlpha = [...orderStateCopyAlpha.videogames];
             if (action.payload === "A") {
@@ -41,6 +44,7 @@ const reducer = (state = initialState, action) => {
         case RATING: 
               const orderStateCopy = { ...state };
               const charactersToOrder = [...orderStateCopy.videogames];
+
               if (action.payload === "A") {
                       charactersToOrder.sort((a, b) => a.rating - b.rating); 
               } else if (action.payload === "D") {
@@ -51,6 +55,7 @@ const reducer = (state = initialState, action) => {
                    videogames: charactersToOrder,
             }; 
         case FILTERID:
+            state.typeid = action.payload
             let paraordenarr = state.videogamesall
             let paraordenar = []
             if (action.payload === 'All') {
@@ -59,24 +64,35 @@ const reducer = (state = initialState, action) => {
                 paraordenar = paraordenarr.filter((character) => typeof character.id === 'string');
             } else if (action.payload === 'api') {
                 paraordenar = paraordenarr.filter((character)  => typeof character.id === 'number');
+            } 
+            if (state.typegenre !== 'All'){
+                paraordenar = paraordenar.filter(videojuego =>
+                    videojuego.genres.some(genres => genres.name === state.typegenre)
+                );
             }
            return {
                     ...state,
                      videogames: paraordenar,
                    };
         case FILTERGEN:
+            state.typegenre = action.payload
             let ordenargen = state.videogamesall
             let ordenar = []
-            if (action.payload === 'All') {
-                ordenar = state.videogamesall;
-            } else {
-                ordenar = ordenargen.filter(videojuego =>
-                    videojuego.genres.some(genres => genres.name === action.payload)
-                );
+            if (state.typeid === 'All') {
+                ordenargen = state.videogamesall;
+           } else if (state.typeid === 'database') {
+            ordenargen = ordenargen.filter((character) => typeof character.id === 'string');
+           } else if (state.typeid === 'api') {
+            ordenargen = ordenargen.filter((character)  => typeof character.id === 'number');
+           } 
+           if (action.payload !== 'All'){
+            ordenargen = ordenargen.filter(videojuego =>
+                videojuego.genres.some(genres => genres.name === action.payload)
+            );
             }
             return {
                 ...state,
-                 videogames: ordenar,
+                 videogames: ordenargen,
                };
                
       default:

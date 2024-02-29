@@ -3,9 +3,8 @@
     background-position: center; 
     background-repeat: no-repeat;
     min-width: 100vh;
-    min-height: 90vh;
-    margin-top: 20px;
-    padding-bottom: 17px;
+    min-height: 100vh;
+    background-image: url('https://wallpaperset.com/w/full/b/9/5/18094.jpg');
 }
 .texto{
     font-size: x-large;
@@ -16,6 +15,7 @@
     text-align: center;
     margin-left: 100px;
     margin-right: 100px;
+    padding-top: 18px;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
 }
 
@@ -32,10 +32,11 @@
 }
 
 .div{
+    margin-top: 20px;
     text-align: center;
     margin-left: 500px;
     margin-right: 500px;
-    height: 840px;
+    height: 850px;
     background-color: rgba(65, 64, 64, 0.801);
     border: 2px solid #000; 
     border-radius: 4px;
@@ -46,9 +47,22 @@
     height: 40px;
     width: 40px;
     padding-top: 0px;
-    margin-top: 40px;
-    margin-left: 10px;
+    margin-top: 30px;
+    margin-left: -2px;
     filter: brightness(0%);
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+    
+}
+.logogh{
+    height: 80px;
+    width: 80px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    margin-left: 10px;
+    margin-right: -14px;
+    filter: brightness(700%); 
     transition: filter 0.3s ease-in-out;
     cursor: pointer;
     
@@ -58,7 +72,7 @@
     height: 150px;
     width: 150px;
     margin-top: 20px;
-    padding-top: 5px;
+    padding-top: 0px;
     padding-bottom: 10px;
     margin-left: 200px;
     display: block;
@@ -67,7 +81,9 @@
 .logoig:hover {
     filter: brightness(650%); 
 }
-
+.logogh:hover {
+    filter: brightness(650%); 
+}
 .logoli{
     height: 40px;
     width: 40px;
@@ -112,5 +128,6 @@
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 20px;
+    height: 550px;
     box-shadow: 0 0 10px 5px rgb(248, 248, 248);
 }

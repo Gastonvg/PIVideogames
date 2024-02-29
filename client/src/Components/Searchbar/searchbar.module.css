@@ -13,6 +13,8 @@
     padding-left: 10px;
     display: flex;
     margin-top: 0px;
+    background-color:  black;
+    color: white;
     
 
 }
@@ -37,10 +39,17 @@
 .opciones{
     margin-right: 14px;
     color: white;
+    outline: none;
+    border: none;
 }
 
 .selector{
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.822);
+    outline: none;
+    border: none;
+    padding-left: 4px;
+    cursor: pointer;
 }
 
 .selector:focus {
@@ -49,20 +58,24 @@
 }
 
 .botonbuscar{
+    background-color: rgba(255, 255, 255, 0.822);
     height: 20px;
     margin-top: 0px;
     border-radius: 0px;
     border: 0px;
     transition: background-color 0.3s ease;
     border-left: 1px solid black;
+    cursor: pointer;
 
 }
 .botontodos{
+    background-color: rgba(255, 255, 255, 0.822);
     border-radius: 0px 10px 10px 0px;
     border: 0px;
     border-left: 1px solid black;
     height: 20px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .botonbuscar:hover {
@@ -72,4 +85,5 @@
   .botontodos:hover {
     background-color: rgb(160, 160, 160); /* Escala la imagen al 110% cuando el cursor está sobre ella */
   }
+
 

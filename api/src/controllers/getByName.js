@@ -10,7 +10,7 @@ const getByName = async (req, res) => {
     let dbVideogames = [];
     let apiVideogames = [];
 
-    // Buscar videojuegos en la base de datos que coincidan con el término de búsqueda en el nombre
+ 
     if (name) {
         dbVideogames = await Videogame.findAll({
             where: {

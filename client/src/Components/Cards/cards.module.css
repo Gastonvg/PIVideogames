@@ -3,7 +3,7 @@
 }
 
 .pagina{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.822);
     padding-left: 20px;
     padding-right: 22px;
     font-size: 20px;
@@ -15,6 +15,7 @@
     display: flex;
     margin-left: 43vw;
     font-size: 20px;
+    
     
 }
 
@@ -28,7 +29,9 @@
     margin-bottom: 18px;
      border-radius: 20px 0px 0px 20px; /* Redondea solo la esquina superior derecha */
      transition: background-color 0.3s ease;
-     border: 0px
+     border: 0px;
+     background-color: rgba(255, 255, 255, 0.822);
+     cursor: pointer;
 }
 
 .boton2{
@@ -41,6 +44,8 @@
      border-radius: 0px 20px 20px 0px; /* Redondea solo la esquina superior derecha */
      border: 0px;
      transition: background-color 0.3s ease;
+     background-color: rgba(255, 255, 255, 0.822);
+     cursor: pointer;
 }
 
 
@@ -56,4 +61,5 @@
 .loading{
     font-size: 80px;
     color: white;
+    text-align: center;
 }

@@ -10,14 +10,10 @@ const getByid = async (req, res) => {
     try {
         if(isNaN(idVideogame)){
             const dbVideogame = await Videogame.findOne({ where: { id: idVideogame }, include: [{ model: Genres, attributes: ['id', 'name'], through: { attributes: [] } }], });
-            // const genresdb = await dbVideogame.getGenres()
             res.json(dbVideogame);
         } else {
                 const response = await axios.get(`${URL}${idVideogame}${DB_APIKEY}`);
                 const data = response.data;
-                // Construir el objeto del videojuego con los datos obtenidos de la API
-           
-        // Enviar la respuesta con el videojuego encontrado
         res.json(data);
     }
     } catch (error) {

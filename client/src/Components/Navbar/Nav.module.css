@@ -17,30 +17,20 @@
 
 .agregar {
 margin-inline-start: auto;
-
-
-}
-.separar{
-padding-right: 10px;
-
 }
 
-.botones {
-border: 1px solid rgb(20, 20, 20);
-padding-left: 10px;
-margin-left: 10px;
-margin-top: 9px;
-margin-bottom: 13px;
-padding-bottom: 4px;
-padding-top: 4px;
-background-color: #f8f8f8;
-cursor: pointer;
-transition: background-color 0.3s ease;
-border: black;
+.activeLink{
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-left: 40px;
+    cursor: pointer;
+    border: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
-.botones:hover {
-background-color: #1bd31b; 
-}
+
 .link{
 padding-left: 10px;
 margin-left: 10px;
@@ -51,34 +41,26 @@ color: white;
 font-size: 18px;
 font-weight: 300;
 font-family: 'Arial Narrow Bold', sans-serif;
-color: white;
 text-decoration: none;
 }
-.link:hover {
-color: #1bd31b;
+.link:hover{
+    color: rgba(255, 255, 255, 0.719);
 }
 
-.logout{
-border: 1px solid rgb(20, 20, 20);
+.link2{
 padding-left: 10px;
 margin-left: 10px;
-margin-top: 9px;
-margin-bottom: 13px;
-padding-bottom: 4px;
-padding-top: 4px;
-background-color: #f8f8f800;
+padding-left: 40px;
 cursor: pointer;
-transition: background-color 0.3s ease;
 border: black;
+color: white;
 font-size: 18px;
 font-weight: 300;
 font-family: 'Arial Narrow Bold', sans-serif;
-color: white;
+text-decoration: none;
+color: #10ff74;
+}
 
-}
-.logout:hover {
-color: #eb2424fb; 
-}
 
 .imagen{
 width: 100px;
@@ -99,86 +81,14 @@ cursor: pointer;
 transition: background-color 0.3s ease;
 border: black;
 }
-.random:hover {
-background-color: #1bd31b; 
-}
 
 
-.audio{
-padding-bottom: 0px;
-padding-top: 15px;
-margin-top: 0px;
-margin-left: 10px;
-width: 300px;
-height: 20px;
-color: black;
-}
-
-.logoli{
-height: 40px;
-width: 40px;
-margin-bottom: 0px;
-padding-bottom: -40px;
-filter: invert(100%);
-color: white;
-transition: transform 0.3s ease;
-cursor: pointer;
-flex: auto;
-margin-right: 1px;
-}
-
-.randomlogocont{
-padding-bottom: 0px;
-margin-bottom: 0px;
-height: 0px;
-height: 50px;
-width: 150px;
-}
 .randomtext{
 color: rgb(245, 245, 245);
 font-size: 18px; 
 }
 
 
-.logocor{
-height: 35px;
-width: 35px;
-margin-bottom: 0px;
-padding-bottom: -40px;
-filter: brightness(10000%);
-color: rgb(226, 9, 9);
-transition: transform 0.3s ease;
-cursor: pointer;
-flex: auto;
-margin-right: 1px;
-}
-
-.randomlogocor{
-padding-bottom: 0px;
-margin-bottom: 0px;
-height: 0px;
-height: 40px;
-width: 150px;
-margin-top: 2px;
-}
-.randomcor{
-color: rgb(245, 245, 245);
-margin-top: 0px;
-padding-top: -40px;
-margin-top: -10px;
-flex: auto;
-font-size: 14px; 
-}
-
-.logocor:hover{
-transform: scale(1.2);
-filter: brightness(100%) sepia(100%) saturate(10000%) hue-rotate(0deg);
-}
-
-.logoli:hover{
-transform: scale(1.2);
-filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(0deg)
-}
 
 
 

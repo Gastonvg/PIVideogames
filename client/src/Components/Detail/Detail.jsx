@@ -18,7 +18,6 @@ function Detail() {
         return setCharacterDetail({}) 
     }, [id])
 
-   console.log(characterDetail);
    const platformsNames = characterDetail.platforms?.map(platform => platform.platform.name);
    const platformsgenres = characterDetail.genres?.map(genres => genres.name);
 
@@ -35,6 +34,8 @@ function Detail() {
                     {characterDetail.image !== undefined && <img src={characterDetail.image} className={styles.imagen}/>}
                        {characterDetail.background_image !== undefined && <img src={characterDetail.background_image} className={styles.imagen}/> }
                     <div className={styles.otrosdatos}>
+                    <h2 className={styles.subtitulo}> ID</h2>
+                    <h2 className={styles.otrosdatos}>{characterDetail.id} <br/> </h2>
                      <h2 className={styles.subtitulo}> Genres </h2>
                         {platformsgenres !== undefined && <h2 className={styles.otrosdatos}>{platformsgenres && platformsgenres.join(', ')} <br/> </h2> }
                         <h2 className={styles.subtitulo}> Rating </h2>

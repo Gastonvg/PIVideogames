@@ -2,6 +2,7 @@ import Inicio from './Components/Inicio/inicio';
 import Home from './Components/Home/home';
 import Detail from './Components/Detail/Detail';
 import Form from './Components/Form/Form';
+import Error from './Components/Error/error';
 import {Routes, Route, useLocation} from 'react-router-dom';
 import { useState, useEffect} from 'react';
 import Nav from './Components/Navbar/navbar';
@@ -12,16 +13,10 @@ import About from './Components/About/About';
 
 
 
+
 function App() {
   const location = useLocation();
-  const [videogames, setvideogames] = useState([])
-  useEffect(() => {
-    const navElement = document.getElementById('navbar');
-    if (location.pathname !== '/' && navElement) {
-      navElement.style.display = 'block';
-    }
-  }, [location.pathname, videogames]);
-
+  const [showNav, setShowNav] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -55,16 +50,21 @@ function App() {
       alert(error.message);
     }
   };
+  useEffect(() => {
+    setShowNav(location.pathname !== '/');
+  }, [location.pathname]);
+
   return (
     <div>
-      <Nav id="navbar" />
+        {showNav && <Nav id="navbar" />}
       <Routes>
              <Route path="/" exact>
                 <Route path="/" element={<Inicio/>}/>
-                <Route path="/Home" element={<Home onSearch={onSearch}/>}/>
+                <Route path="/home" element={<Home onSearch={onSearch}/>}/>
                 <Route path="/detail/:id" element={<Detail/>} />
-                <Route path="/Form" element={<Form/>}/>
-                <Route path="/About" element={<About/>}/>
+                <Route path="/form" element={<Form/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="*" element={<Error/>} />
              </Route>
          </Routes>
     </div>

@@ -5,10 +5,11 @@
     min-width: 800px;
 }
 .container{
-    background-color: rgba(80, 30, 66, 0.644);
+    background-color: rgba(15, 15, 15, 0.644);
     display: grid;
     backdrop-filter: blur(5px);
     min-height: 85vh;
+    box-shadow: 0 0 10px 5px rgb(248, 248, 248);
 }
 .rating{
     width: 50px;
@@ -20,9 +21,13 @@
 
 .titulo{
     text-align: center;
+    margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.678);
+    padding-top: 10px;
+    /* background-color: rgb(33, 31, 29); */
 }
 
 .titulo2{
@@ -31,12 +36,15 @@
     margin-block-start: 0;
     font-size: 20px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.692);
+    /* background-color: rgb(33, 31, 29); */
 }
 
 .form{
     padding-top: 0px;
-    box-shadow: 0 0 10px 5px rgb(248, 248, 248);
+    border-top:  1px solid white;
     color: white;
+    margin-left: 300px;
 }
 .opciones{
     width: 220px;
@@ -48,6 +56,18 @@
 .image{
     height: 21px;
     width: 700px;
+}
+.image2{
+    height: 658px;
+    width: 299px;
+    margin-top: 151px;
+    background-size: cover;
+    position: absolute;
+    background-image: url('https://cdn.pixabay.com/photo/2022/07/23/16/51/gaming-7340276_1280.jpg');
+    background-color: aqua;
+    border-top: 1px solid white;
+    background-repeat: no-repeat;
+    border-right: 1px solid white;
 }
 
 .fecha{
@@ -77,10 +97,20 @@
 
 .boton{
     text-align: center;
-    margin-left: 50vw;
+    margin-left: 35vw;
     margin-top: 40px;
+    border: 0px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: gray;
 }
 
+.boton:active {
+        animation: clickAnimation 0.3s ease;
+}
 
 .opcionesplata{
     width: 80vw;
@@ -92,3 +122,10 @@
     width: 30000px;
 
 }
+
+@keyframes clickAnimation {
+    50% {
+       
+            box-shadow: 0 0 20px 10px rgba(5, 219, 33, 0.5); 
+    }
+  }

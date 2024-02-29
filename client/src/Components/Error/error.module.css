@@ -1,0 +1,16 @@
+.background{
+    background-image: url('https://i.redd.it/x1sr1lob3ai41.jpg');
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-size: cover;
+}
+.boton{
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    font-size: 40px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 46vw;
+}

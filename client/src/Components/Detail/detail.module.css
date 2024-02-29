@@ -37,12 +37,11 @@
 }
 
 .imagen{
-    max-width: 700px;
-    max-height: 580px;
-    height: 520px;
+    max-width: 720px;
+    max-height: 700px;
+    height: 620px;
     margin-right: 10px;
-
-
+    aspect-ratio: 16/9;
 }
 
 .titulo{
@@ -52,7 +51,7 @@
 .datos{
     background-color: rgba(255, 255, 255, 0.075);
     display: flex;
-    height: 500px;
+    height: 600px;
     font-family: 'Courier New', Courier, monospace;
     padding-bottom: 20px;
     color: white;

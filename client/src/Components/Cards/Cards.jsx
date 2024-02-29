@@ -28,12 +28,16 @@ export default function Cards() {
     };
     useEffect(() => {
         if (videogames.length > 0) setLoading(false)
-    }, [videogames]);
+        const totalPages = Math.ceil(videogames.length / pageSize);
+        if (paginado > totalPages) {
+            setPaginado(1);
+        }
+    }, [videogames, paginado]);
     return(
         <div className={styles.container}>
-        {loading ? ( // Si está cargando, mostrar la pantalla de carga
+        {loading ? ( 
             <div className={styles.loading}>
-                <h1>Loading...</h1>
+                <img src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif'></img>
             </div>
         ) : (
             <>

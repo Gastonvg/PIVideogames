@@ -6,7 +6,7 @@ function Inicio() {
      return(
          <div className={styles.backgroundinicio}>
            <div className={styles.container}>
-
+            <img src='https://i.ibb.co/1JWyb82/Video-Game-Controller-Logo-Graphics-69127373-1-1-580x387-imageonline-co-4943474-3.png' className={styles.imagen}></img>
             <h5><p className={styles.titulo}>VideoGames</p></h5>
             <br></br>
             <h5><p className={styles.texto}>Welcome to our webpage featuring a diverse selection of games, each accompanied by detailed information.
@@ -18,7 +18,7 @@ function Inicio() {
             <h5><p className={styles.enter}>Click on Start to enter</p></h5>
     
            </div>
-           <NavLink to='/Home' className={styles.boton}>START</NavLink>
+           <NavLink to='/home' className={styles.boton}>START</NavLink>
          </div>
     )   
 }

@@ -16,6 +16,7 @@ function Form() {
         image: ""
     });
    const platformsOptions = ["PC", "Xbox", 'Xbox Series S/X' , "Nintendo Switch", 'macOS', "PlayStation 5", 'PlayStation 4', 'PlayStation 3', 'Linux' ];
+   const [errors, setErrors] = useState({});
    const handleChange = (e) => {
       const { name, value } = e.target;
       if (name === "rating") {
@@ -84,11 +85,11 @@ const handleSubmit = async (e) => {
    const validNameFormat = /^[a-zA-Z0-9\s]+$/;
    const validDateFormat = /^\d{4}\/\d{1,2}\/\d{1,2}$/;
    if (!validNameFormat.test(form.name)) {
-     alert("Name invalid or blank");
+     alert("Name invalid or blank. (only letters and numbers are allowed)");
      return;
      }
    if (!validDateFormat.test(form.released)) {
-         alert("Format of date not valid");
+         alert("Format of date not valid, (yy/mm/dd)");
          return;
      }
    if (form.description.trim() === "") {
@@ -114,23 +115,23 @@ const handleSubmit = async (e) => {
           alert('Your game was created!!');
           fetchData()
       } else {
-          alert('Error sending', error);
+          alert('Error sending');
       }
   } catch (error) {
      alert( error.response.data.message);
   }
-   console.log("Formulario enviado:", form);
 };
     return (
         <div className={styles.todo}>
             <div className={styles.container}>
                 <h1 className={styles.titulo}>Make your own Game!!</h1>
                 <p className={styles.titulo2}>Welcome to our game creation platform! Here, you have the opportunity to bring your game to life. Customize every aspect, from the title to the release date, description, rating, and more.</p>
+                <div className={styles.image2}></div>
                 <form onSubmit={handleSubmit} className={styles.form}>
                   <div className={styles.opciones}>
                     <label>
                         Name*
-                        <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Name" />
+                        <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Enter the game name" />
                     </label>
                     </div>
                     <div className={styles.opciones}>
@@ -142,7 +143,7 @@ const handleSubmit = async (e) => {
                     <div className={styles.opciones}>
                     <label>
                         Description*
-                        <textarea name="description" className={styles.des} value={form.des} onChange={handleChange}placeholder="" />
+                        <textarea name="description" className={styles.des} value={form.des} onChange={handleChange}placeholder="Write your description" />
                     </label>
                     </div>
                     <div className={styles.opciones2}>
@@ -154,7 +155,7 @@ const handleSubmit = async (e) => {
                     <div className={styles.opciones}>
                     <label>
                         Image*
-                        <input  name="image"  className={styles.image} value={form.image} onChange={handleChange} placeholder="URL de la imagen"/>
+                        <input  name="image"  className={styles.image} value={form.image} onChange={handleChange} placeholder="URL of the picture (png, jpg, jpeg, gif)"/>
                     </label>
                     </div>
                     <div className={styles.opcionesplata}>
@@ -238,7 +239,7 @@ const handleSubmit = async (e) => {
                      </span>
                     </label>
                     </div>
-                    <button  className={styles.boton}type="submit">Send</button>
+                    <button  className={styles.boton}type="submit">Submit</button>
                 </form>
             </div>
         </div>
